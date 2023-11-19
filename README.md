@@ -4,12 +4,12 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 This is a CRUD web application front-end using angular version 17 connecting to api with json-server
 
-There are sereral technical using in this web application:
+There are sereral technicals using in this web application:
 
 + angular 17
 + json-server
   
-CRUD stands for main function :
+CRUD stands for main functions :
 
 + C: Create User
 + R: Read User(s)
