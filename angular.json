@@ -76,7 +76,7 @@
               "buildTarget": "angular-js-server-crud:build:production"
             },
             "development": {
-              "buildTarget": "angular-js-server-crud1:build:development"
+              "buildTarget": "angular-js-server-crud:build:development"
             }
           },
           "defaultConfiguration": "development"
