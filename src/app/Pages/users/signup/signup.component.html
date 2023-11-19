@@ -1,0 +1,73 @@
+<div>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header">
+                <h4>Sign Up
+                    <a routerLink="/user-list" class="btn btn-primary float-end">Back To List</a>
+                </h4>
+            </div>
+            <div class="card-body">
+                <div *ngIf="isLoading; else elseForm">
+                    <app-loading :title="loadingTitle"></app-loading>
+                </div>
+                <ng-template #elseForm>
+                
+                <form [formGroup]="userForm" (ngSubmit)="createUser()">
+                    <div class="mb-3">
+                        <label>Name</label>
+                        <input type="text" formControlName="name" class="form-control" />
+                        <div *ngIf="userForm.get('name')?.hasError('required') && userForm.get('name')?.touched"
+                            class="text-danger">
+                            Name is required.
+                        </div>
+                    </div>                    
+                    <div class="mb-3">
+                        <label>Email</label>
+                        <input type="text" formControlName="email" class="form-control" />
+                        <div *ngIf="userForm.get('email')?.hasError('required') && userForm.get('email')?.touched"
+                            class="text-danger">
+                            Email is required.
+                        </div>
+                    </div>                    
+                    <div class="mb-3">
+                        <label>Phone</label>
+                        <input type="text" formControlName="phone" class="form-control" />
+                        
+                        <div *ngIf="(userForm.get('phone')?.hasError('required') || userForm.get('phone')?.hasError('invalidInteg')) && userForm.get('phone')?.touched"
+                            class="text-danger">
+                            Phone must be a valid number.
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label>Country</label>
+                        <input type="text" formControlName="country" class="form-control" />
+                        <div *ngIf="userForm.get('country')?.hasError('required') && userForm.get('country')?.touched"
+                            class="text-danger">
+                            Country is required.
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label>Address</label>
+                        <input type="text" formControlName="address" class="form-control" />
+                        <div *ngIf="userForm.get('address')?.hasError('required') && userForm.get('address')?.touched"
+                            class="text-danger">
+                            Address is required.
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label>Gender</label>
+                        <input type="text" formControlName="gender" class="form-control" />
+                        <div *ngIf="userForm.get('gender')?.hasError('required') && userForm.get('gender')?.touched"
+                            class="text-danger">
+                            Gender is required.
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </div>
+                </form>
+                </ng-template>
+            </div>
+        </div>
+    </div>
+</div>

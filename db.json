@@ -1,0 +1,31 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "name": "man vo",
+      "email": "man@man.com",
+      "phone": "1234 789",
+      "country": "usa",
+      "address": "quận 1 tphcm",
+      "gender": "male"
+    },
+    {
+      "id": 2,
+      "name": "Nguyen Văn A",
+      "email": "a@a.com",
+      "phone": "123 1123",
+      "country": "singapore",
+      "address": "quận bình thạnh tphcm",
+      "gender": "female"
+    },
+    {
+      "id": 3,
+      "name": "Trương Văn Hung",
+      "email": "test@test.com",
+      "phone": "345 7789",
+      "country": "vietnam",
+      "address": "cần giuộc, long an",
+      "gender": "female"
+    }
+  ]
+}
